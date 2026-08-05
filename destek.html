@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucida Destek</title>
+<meta name="description" content="Lucida uygulaması için destek, sık sorulan sorular ve iletişim.">
+<style>
+  :root {
+    --bg: #0B0D17;
+    --panel: #12162A;
+    --text: #E6E9F5;
+    --muted: #9AA3C4;
+    --line: #232941;
+    --accent: #FFB454;
+    --link: #7FA5FF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+  header svg { width: 44px; height: 44px; border-radius: 10px; flex: none; }
+  h1 { font-size: 1.6rem; margin: 0; letter-spacing: -0.01em; }
+  .lead { color: var(--muted); margin: 0 0 34px; }
+  h2 { font-size: 1.12rem; margin: 36px 0 10px; padding-top: 18px; border-top: 1px solid var(--line); }
+  h3 { font-size: 0.98rem; margin: 22px 0 6px; color: var(--accent); }
+  p, li { color: #D3D8EC; }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  a { color: var(--link); }
+  .contact { margin-top: 14px; padding: 18px 20px; border-radius: 12px; background: var(--panel); border: 1px solid var(--line); }
+  .contact a { font-size: 1.05rem; font-weight: 600; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <svg viewBox="0 0 128 128" aria-hidden="true">
+    <defs>
+      <radialGradient id="odak" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".95"/>
+        <stop offset="24%" stop-color="#FFD9A8" stop-opacity=".5"/>
+        <stop offset="100%" stop-color="#FFB454" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="atmosfer" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#070911"/>
+        <stop offset="58%" stop-color="#0D1224"/>
+        <stop offset="100%" stop-color="#1A2547"/>
+      </linearGradient>
+    </defs>
+    <rect width="128" height="128" fill="url(#atmosfer)"/>
+    <circle cx="104" cy="22" r="1.4" fill="#39456D"/>
+    <circle cx="36" cy="34" r="1.1" fill="#39456D"/>
+    <path d="M28 78 L48 52 L66 60 L88 36" fill="none" stroke="#3B4974" stroke-width="1.9"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="28" cy="78" r="3.4" fill="#7E8CBB"/>
+    <circle cx="48" cy="52" r="2" fill="#4E5A85"/>
+    <circle cx="88" cy="36" r="2.8" fill="#6B79A6"/>
+    <circle cx="66" cy="60" r="29" fill="url(#odak)"/>
+    <circle cx="66" cy="60" r="7.5" fill="#FFFFFF"/>
+    <path d="M0 128 L0 112 Q22 98 44 108 Q66 118 88 102 Q108 88 128 100 L128 128 Z" fill="#05070E"/>
+  </svg>
+  <h1>Lucida Destek</h1>
+</header>
+
+<p class="lead">
+  Sorun, soru veya öneri için doğrudan yazabilirsin. Genelde birkaç gün içinde dönüş yapılır.
+</p>
+
+<div class="contact">
+  E-posta: <a href="mailto:bozcaegemen@gmail.com">bozcaegemen@gmail.com</a>
+</div>
+
+<h2>Sık sorulanlar</h2>
+
+<h3>Gökyüzü ekranı yanlış yönü gösteriyor</h3>
+<p>
+  Yön bilgisi telefonun pusulasından gelir ve pusula manyetik etkiden kolayca şaşar.
+  Telefonu havada sekiz çizerek kalibre et, metal masa ve mıknatıslı kılıflardan uzaklaş.
+  Parmakla kaydırarak görüntüyü elle de yönlendirebilirsin.
+</p>
+
+<h3>Gözlem puanı neden düşük görünüyor</h3>
+<p>
+  Puan dört etkeni birleştirir: gökyüzünün tam kararıp kararmadığı, Ay'ın gökyüzünde
+  olup olmadığı, bulutluluk ve bulunduğun yerin ışık kirliliği. Planlayıcı ekranındaki
+  "Puanı Ne Belirledi" bölümü hangi etkenin ne kadar düşürdüğünü gösterir.
+</p>
+
+<h3>Işık kirliliği değerim yanlış</h3>
+<p>
+  Bortle değeri konumundan tahmin edilir ve uydu verisine dayandığı için yerel farkları
+  (vadi, tepe, yakın bir stadyum) yakalayamaz. Planlayıcı ekranından elle
+  değiştirebilirsin; seçimin kaydedilir.
+</p>
+
+<h3>ISS geçişi neden "görünmez" diyor</h3>
+<p>
+  İstasyon yörüngesinin büyük kısmında gökyüzündedir ama çıplak gözle görünmez.
+  Görünmesi için iki şart gerekir: senin bulunduğun yerin karanlık olması ve istasyonun
+  güneş ışığı alması. Uygulama yalnızca bu iki şartı sağlayan geçişleri "görünür" sayar.
+</p>
+
+<h3>Uzaktaki bir geçişin saati neden kesin değil</h3>
+<p>
+  Geçişler, istasyonun yayınlanan yörünge verisinden hesaplanır. Bu veri düzenli
+  güncellenir ve birkaç günden uzak tahminler dakikalar mertebesinde kayabilir. Tarih
+  yaklaştıkça tahmin oturur.
+</p>
+
+<h3>İnternet olmadan çalışır mı</h3>
+<p>
+  Astronomi hesaplarının tamamı cihazında yapılır. Katalog, yıldız haritası ve Atlas
+  internetsiz çalışır. Yalnızca hava durumu, istasyonun yörünge verisi ve günün uzay
+  görseli bağlantı ister.
+</p>
+
+<h3>Uygulama başka dilde var mı</h3>
+<p>Şu an yalnızca Türkçe. İngilizce desteği planlanıyor.</p>
+
+<h2>Gizlilik</h2>
+<p>
+  Uygulamanın hangi verileri işlediği ayrı bir sayfada anlatılıyor:
+  <a href="./">Lucida Gizlilik Politikası</a>.
+</p>
+
+<footer>
+  Lucida &middot; Egemen Bozca
+</footer>
+
+</div>
+</body>
+</html>
