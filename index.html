@@ -74,7 +74,7 @@
   <h1>Lucida Gizlilik Politikası</h1>
 </header>
 
-<p class="updated"><strong>Son güncelleme:</strong> 8 Ekim 2026</p>
+<p class="updated"><strong>Son güncelleme:</strong> 10 Ekim 2026</p>
 
 <p>
   Bu belge Lucida uygulamasının hangi verileri işlediğini anlatır. Uygulamanın gerçek
@@ -83,9 +83,11 @@
 
 <h2>Özet</h2>
 <p>
-  Lucida hesap açmanı istemez, seni tanımlamaz ve reklam göstermez. Kişisel verilerini kimseye
-  satmaz veya pazarlama amacıyla paylaşmaz. Uygulama içinde tutulan tercihlerin yalnızca senin
-  cihazında kalır.
+  Lucida hesap açmanı istemez ve reklam göstermez. Kişisel verilerini kimseye
+  satmaz veya pazarlama amacıyla paylaşmaz. Günlüklerin, notların, fotoğrafların
+  ve seçtiğin konumlar cihazında kalır. İzin verirsen uygulamayı geliştirmek için
+  Google Firebase Analytics ile kullanım istatistikleri ölçülür. Analitik
+  başlangıçta kapalıdır; izin vermeden uygulamayı kullanabilirsin.
 </p>
 
 <h2>Toplanan veriler</h2>
@@ -97,22 +99,72 @@
 </p>
 <ul>
   <li>Konum izni vermezsen uygulama varsayılan bir konumla çalışmaya devam eder.</li>
-  <li>Konumun cihazından çıkan tek yer hava durumu servisidir (aşağıda).</li>
-  <li>Konum geçmişin kaydedilmez, saklanmaz, bize gönderilmez.</li>
+  <li>Seçilen konum hava tahmini için hava durumu servisine gönderilir (aşağıda).
+    Konumun adını bulmak ve aradığın yerin koordinatlarını çözmek için işletim
+    sisteminin konum/adres hizmetleri de kullanılır; bunlar ağ bağlantısı kullanabilir.</li>
+  <li>Sürekli konum takibi yapılmaz. Son seçtiğin beş konum ve gözlem günlüklerine
+    eklediğin konumlar yalnızca cihazında saklanır; Lucida sunucusuna gönderilmez.</li>
 </ul>
 
 <h3>Cihazda tutulan tercihler</h3>
 <p>
-  Seçtiğin ışık kirliliği (Bortle) değeri, konum tercihin, favorilediğin gök cisimleri ve gözlem
-  günlüğüne yazdığın kayıtlar (hedef, tarih, konum, ekipman, not, puan ve istersen eklediğin bir
-  fotoğrafın kopyası) cihazının yerel depolamasında tutulur. Bu veriler cihazından çıkmaz, uygulamayı silersen kaybolur.
+  Seçtiğin ışık kirliliği (Bortle) değeri, konum tercihin (manuel/GPS), son seçtiğin
+  beş konum, temel gözlem ekipmanın (çıplak göz, dürbün veya teleskop), favorilediğin gök
+  cisimleri ve gözlem günlüğüne yazdığın kayıtlar (hedef, tarih, konum, ekipman,
+  not, puan ve istersen eklediğin bir fotoğrafın kopyası) cihazının yerel
+  depolamasında tutulur. Bu veriler cihazından
+  çıkmaz, uygulamayı silersen kaybolur.
+</p>
+
+<h3>İsteğe bağlı kullanım analitiği</h3>
+<p>
+  Lucida 1.5.1 ve sonraki derlemelerinde Google Firebase Analytics entegrasyonu
+  bulunur. İlk kullanımda istatistik paylaşma tercihin sorulur. <strong>Açıkça izin
+  vermedikçe analitik veri toplama kapalıdır.</strong> Ayarlar → Kullanım istatistikleri
+  bölümünden tercihini değiştirebilirsin. Ücretsiz özellikler veya Premium
+  erişimi analitik iznine bağlı değildir.
+</p>
+<p>İzin verirsen şu bilgiler Google tarafından işlenebilir:</p>
+<ul>
+  <li>Firebase'in oluşturduğu rastgele uygulama kurulum kimliği; adın veya hesabınla
+    eşleştirilmez. Bu kimlik oturumları ilişkilendirdiği için ölçüm tamamen anonim
+    değil, takma kimlikli (pseudonymous) ölçümdür.</li>
+  <li>Cihaz modeli, işletim sistemi, uygulama sürümü, dil ve oturum/etkileşim süreleri
+    gibi SDK'nın standart teknik bilgileri. Google bağlantının IP adresinden
+    yaklaşık coğrafi istatistikler türetebilir; seçtiğin konum koordinatları
+    analitiğe gönderilmez.</li>
+  <li>Görüntülenen ekran türleri, seçilen katalog hedefleri, aramanın uzunluğu ve
+    sonuç sayısı, kullanılan filtreler ve gözlem rotası adımları.</li>
+  <li>Günlük kaydının başarıyla kaydedilmesi/silinmesi, gözlem sonucu ve puanı,
+    not/fotoğraf/ekipman alanının dolu olup olmadığı. Bu alanların içeriği,
+    kişisel kayıt kimliği, gözlem tarihi ve konumu gönderilmez.</li>
+  <li>Seçilen arayüz dili, gece kipi, temel ekipman türü, bildirim tercihleri,
+    Premium ekranı/plan seçimleri ve satın alma veya geri yüklemenin sonuç durumu.
+    Makbuzlar ve mağaza hesabı bilgileri analitiğe gönderilmez.</li>
+  <li>Hava verisi gibi isteklerin genel başarısızlık kategorisi, takvim ekranının
+    sonuç durumu ve teleskop bağlantısının başarı durumu. Hata mesajı, ağ adresi,
+    IP/port veya konum analitiğe gönderilmez.</li>
+</ul>
+<p>
+  Arama metinleri, günlük notları, fotoğraflar, konum koordinatları, teleskop
+  IP/port bilgisi ve reklam kimlikleri analitiğe gönderilmez. Her sensör örneği
+  veya çizim karesi ölçülmez. Reklam depolama, reklam kişiselleştirme ve reklam
+  amaçlı kullanıcı verisi paylaşımı kapalı tutulur.
+</p>
+<p>
+  İzni kapatmak yeni analitik olaylarını durdurur; cihazdaki analitik verisi ve
+  kurulum kimliği SDK üzerinden sıfırlanır. Daha önce Google'a gönderilmiş
+  verilerin geriye dönük silindiği anlamına gelmez. Sunucu saklama ve silme
+  işlemleri Google Analytics'in ayarları ve Google'ın politikaları kapsamında
+  yürütülür. İlgili talepler için aşağıdaki iletişim adresini kullanabilirsin.
 </p>
 
 <h3>Toplanmayanlar</h3>
 <p>
-  Uygulama şunları toplamaz: ad, e-posta, telefon numarası, kişiler, fotoğraf arşivin (günlüğe kendi
-  seçtiğin fotoğraf dışında; o da cihazında kalır), cihaz kimliği,
-  reklam kimliği, kullanım analitiği, çökme raporu.
+  Uygulama şunları toplamaz: ad, e-posta, telefon numarası, kişiler, fotoğraf
+  arşivin (günlüğe kendi seçtiğin fotoğraf dışında; o da cihazında kalır),
+  reklam kimliği, donanım seri numarası, kişisel günlük içeriği ve tam çökme
+  raporu. İzin verilmiş kullanım analitiğinin kapsamı yukarıda açıklanmıştır.
 </p>
 
 <h2>Üçüncü taraf servisler</h2>
@@ -127,8 +179,13 @@
   <tbody>
     <tr>
       <td><a href="https://open-meteo.com/">Open-Meteo</a></td>
-      <td>Enlem ve boylam (yaklaşık)</td>
+      <td>Seçilen konumun enlem ve boylamı (koordinatlar yuvarlanmadan)</td>
       <td>Hava durumu ve bulutluluk tahmini</td>
+    </tr>
+    <tr>
+      <td>İşletim sisteminin konum/adres hizmetleri</td>
+      <td>Aradığın yerin adı veya seçilen koordinatlar</td>
+      <td>Yer araması ve konum etiketi</td>
     </tr>
     <tr>
       <td><a href="https://celestrak.org/">CelesTrak</a></td>
@@ -137,8 +194,13 @@
     </tr>
     <tr>
       <td>Lucida arka ucu (Google Cloud, Belçika)</td>
-      <td>Hiçbir şey</td>
+      <td>İçerik isteği</td>
       <td>Günün uzay görseli</td>
+    </tr>
+    <tr>
+      <td><a href="https://firebase.google.com/support/privacy">Google Firebase Analytics</a></td>
+      <td>Yalnız izin verildiğinde, yukarıdaki takma kimlikli kullanım/cihaz/oturum bilgileri</td>
+      <td>Uygulamadaki anlaşılmayan veya iyileştirilmesi gereken akışları belirlemek</td>
     </tr>
   </tbody>
 </table>
@@ -148,8 +210,9 @@
   servise yalnızca içerik ister; konumunu veya başka bir bilgini göndermez.
 </p>
 <p>
-  Konumun yalnızca Open-Meteo'ya gider, çünkü hava tahmini konuma bağlıdır. Open-Meteo'nun kendi
-  gizlilik politikası geçerlidir.
+  Hava tahmini konuma bağlı olduğu için seçilen koordinatlar Open-Meteo'ya gider.
+  Open-Meteo'nun ve işletim sisteminin konum/adres sağlayıcısının kendi gizlilik
+  politikaları da geçerlidir.
 </p>
 
 <h2>Teleskop bağlantısı (Beta)</h2>
@@ -166,8 +229,11 @@
 
 <h2>Veri saklama ve silme</h2>
 <p>
-  Uygulama senin adına hiçbir sunucuda veri tutmadığı için silinecek bir hesap ya da kayıt yoktur.
-  Cihazdaki tercihlerini silmek için uygulamayı kaldırman yeterlidir.
+  Lucida kullanıcı hesabı ve sunucuya yüklenen gözlem günlüğü tutmaz. Cihazdaki
+  tercihlerini silmek için uygulamayı kaldırman yeterlidir. İzin verilmiş
+  kullanım analitiği için yukarıdaki saklama ve kapatma açıklaması geçerlidir;
+  uygulamayı kaldırmak daha önce gönderilmiş Google Analytics verilerini
+  otomatik olarak sunucudan silmez.
 </p>
 
 <h2>İzinler</h2>
@@ -180,7 +246,7 @@
     <tr><td>Konum (kullanım sırasında)</td><td>Gökyüzü hesapları, hava durumu, ışık kirliliği tahmini</td></tr>
     <tr><td>İnternet</td><td>Hava durumu, yörünge verisi ve günlük içerik</td></tr>
     <tr><td>Yüksek frekanslı sensörler</td><td>Telefonu çevirdiğinde gökyüzünün akıcı hareket etmesi</td></tr>
-    <tr><td>Bildirim</td><td>Gökyüzü olayları ve iyi gözlem gecesi uyarıları (isteğe bağlı, ayarlardan açılır)</td></tr>
+    <tr><td>Bildirim</td><td>Gökyüzü olayları ve iyi gözlem gecesi uyarıları (isteğe bağlı; ilk açılışta izin sorulur, kategoriler ayarlardan yönetilir)</td></tr>
     <tr><td>Yerel ağ (yalnızca iOS)</td><td>Aynı WiFi ağındaki teleskopa bağlanmak için (Beta, isteğe bağlı)</td></tr>
     <tr><td>Fotoğraf seçici</td><td>Günlük kaydına eklemek istediğin tek fotoğrafı seçmen için sistemin kendi seçicisi açılır; uygulama fotoğraf arşivine erişmez, kameranı ve mikrofonunu kullanmaz</td></tr>
     <tr><td>Takvim, yalnızca yazma (yalnızca iOS)</td><td>"Takvime ekle" dediğin gök olayını takvimine eklemek için. Takvimin okunmaz. Android'de izin istenmez, sistemin kendi ekranı açılır</td></tr>
