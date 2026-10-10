@@ -74,7 +74,7 @@
   <h1>Lucida Gizlilik Politikası</h1>
 </header>
 
-<p class="updated"><strong>Son güncelleme:</strong> 10 Ekim 2026</p>
+<p class="updated"><strong>Son güncelleme:</strong> 11 Ekim 2026</p>
 
 <p>
   Bu belge Lucida uygulamasının hangi verileri işlediğini anlatır. Uygulamanın gerçek
@@ -83,12 +83,16 @@
 
 <h2>Özet</h2>
 <p>
-  Lucida hesap açmanı istemez ve reklam göstermez. Kişisel verilerini kimseye
-  satmaz veya pazarlama amacıyla paylaşmaz. Günlüklerin, notların, fotoğrafların
+  Ücretsiz özellikler için hesap açman gerekmez ve reklam gösterilmez. İsteğe
+  bağlı Google/Apple girişi ve Premium satın alımı seçersen aşağıdaki hesap ve
+  mağaza verileri hizmet sağlayıcıları tarafından işlenir. Kişisel verilerin
+  satılmaz veya pazarlama amacıyla paylaşılmaz. Günlüklerin, notların, fotoğrafların
   ve seçtiğin konumlar cihazında kalır. İzin verirsen uygulamayı geliştirmek için
   Google Firebase Analytics ile kullanım istatistikleri ölçülür. Analitik
   başlangıçta kapalıdır; izin vermeden uygulamayı kullanabilirsin.
 </p>
+
+<p><a href="./hesap-silme.html">Lucida hesabını ve ilişkili verileri silme talebi</a></p>
 
 <h2>Toplanan veriler</h2>
 
@@ -140,7 +144,9 @@
     kişisel kayıt kimliği, gözlem tarihi ve konumu gönderilmez.</li>
   <li>Seçilen arayüz dili, gece kipi, temel ekipman türü, bildirim tercihleri,
     Premium ekranı/plan seçimleri ve satın alma veya geri yüklemenin sonuç durumu.
-    Makbuzlar ve mağaza hesabı bilgileri analitiğe gönderilmez.</li>
+    Giriş/bağlama/çıkış/silme aksiyonunun genel türü, Google veya Apple sağlayıcısı
+    ve sonuç durumu da ölçülebilir. Kullanıcı kimliği, ad, e-posta, sağlayıcı
+    tokenları, makbuzlar ve mağaza hesabı bilgileri analitiğe gönderilmez.</li>
   <li>Hava verisi gibi isteklerin genel başarısızlık kategorisi, takvim ekranının
     sonuç durumu ve teleskop bağlantısının başarı durumu. Hata mesajı, ağ adresi,
     IP/port veya konum analitiğe gönderilmez.</li>
@@ -161,15 +167,53 @@
 
 <h3>Toplanmayanlar</h3>
 <p>
-  Uygulama şunları toplamaz: ad, e-posta, telefon numarası, kişiler, fotoğraf
+  Girişsiz kullanımda ad/e-posta istenmez. İsteğe bağlı hesap seçilirse aşağıdaki
+  hesap kapsamı geçerlidir. Uygulama şunları toplamaz: telefon numarası, kişiler, fotoğraf
   arşivin (günlüğe kendi seçtiğin fotoğraf dışında; o da cihazında kalır),
   reklam kimliği, donanım seri numarası, kişisel günlük içeriği ve tam çökme
   raporu. İzin verilmiş kullanım analitiğinin kapsamı yukarıda açıklanmıştır.
 </p>
 
+<h3>İsteğe bağlı hesap (1.5.2)</h3>
+<p>
+  Google veya iOS'ta Apple ile giriş yapmayı seçersen Firebase Authentication;
+  sağlayıcının paylaştığı ad, e-posta (Apple'ın özel aktarma adresi olabilir),
+  sağlayıcı kimliği ve rastgele Firebase kullanıcı kimliğini (UID) işler.
+  Sağlayıcı tokenları yalnız giriş, yeniden doğrulama ve Apple hesabı silinirken
+  yetki iptali için kullanılır; loglara veya Analytics'e yazılmaz. Parolan Lucida
+  tarafından alınmaz. Native Firebase SDK oturumu tekrar açılışta sürdürmek için
+  gerekli oturum bilgisini cihazda tutar.
+</p>
+<p>
+  Hesaplar yalnız e-posta eşleşmesine göre birleştirilmez. Diğer giriş yöntemini
+  bağlamayı açıkça sen başlatırsın. Giriş yapmak gözlem kaydı, not, konum veya
+  fotoğraflarını sunucuya yüklemez ve bulut yedeği oluşturmaz. Kullanım analitiği
+  izni girişten ve Premium erişiminden bağımsızdır.
+</p>
+
+<h3>Premium satın alımı ve geri yükleme (1.5.2)</h3>
+<p>
+  Ödemeyi App Store / Google Play işler; Lucida kart/banka bilgilerini almaz.
+  Mağaza kurulmuş sürümlerde fiyat ve erişim doğrulaması için RevenueCat SDK
+  bağlantısı kullanılır; girişsizken rastgele SDK kimliği, girişten sonra Firebase
+  UID'si ile ilişkilendirilir. RevenueCat satın alım/makbuz, ürün, abonelik/deneme,
+  yenilenme/sona erme ve teknik cihaz/uygulama bağlantı bilgilerini Premium
+  erişimini doğrulamak için işler. Firebase ad/e-postası RevenueCat müşteri
+  attribute'larına veya Analytics kullanıcı ID'sine yazılmaz. Premium satın alma
+  ve geri yükleme Lucida hesabına giriş gerektirir.
+</p>
+<p>
+  Bu kullanım analitiği değil, ödeme ve erişim hizmeti için gerekli işlemedir.
+  Mağazanın ve RevenueCat'in kendi saklama/hukuki yükümlülükleri de geçerlidir.
+  Hesap değiştirildiğinde önceki hesabın Premium erişimi taşınmaz; doğru Lucida
+  ve mağaza hesabıyla giriş / geri yükleme gerekir.
+</p>
+
 <h2>Üçüncü taraf servisler</h2>
 <p>
-  Uygulama aşağıdaki servislere bağlanır. Hiçbirine kimliğini belirten bir bilgi gönderilmez.
+  Uygulama aşağıdaki servislere bağlanır. Hesap/satın alma seçilirse ilgili
+  sağlayıcılara yukarıdaki kimlik/satın alma verileri gönderilir; gözlem
+  günlüğünün içeriği gönderilmez.
 </p>
 <div class="tablewrap">
 <table>
@@ -202,12 +246,24 @@
       <td>Yalnız izin verildiğinde, yukarıdaki takma kimlikli kullanım/cihaz/oturum bilgileri</td>
       <td>Uygulamadaki anlaşılmayan veya iyileştirilmesi gereken akışları belirlemek</td>
     </tr>
+    <tr>
+      <td>Google/Apple ve <a href="https://firebase.google.com/support/privacy">Firebase Authentication</a></td>
+      <td>İsteğe bağlı girişte sağlayıcı tokenı/kimliği, paylaşılan ad/e-posta ve Firebase UID</td>
+      <td>Hesap ve oturum</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.revenuecat.com/privacy">RevenueCat</a></td>
+      <td>SDK / Firebase kimliği ve yukarıdaki mağaza/abonelik/teknik bilgiler</td>
+      <td>Premium fiyatı, erişim, satın alma ve geri yükleme</td>
+    </tr>
   </tbody>
 </table>
 </div>
 <p>
-  Lucida arka ucu, NASA verisini günde birkaç kez çekip herkese aynı sonucu sunar. Uygulaman bu
-  servise yalnızca içerik ister; konumunu veya başka bir bilgini göndermez.
+  Lucida arka ucu, NASA verisini günde birkaç kez çekip herkese aynı sonucu sunar.
+  Uygulaman APOD servisine yalnızca içerik isteği gönderir. Ayrı hesap silme uç
+  noktasına silmeyi sen başlatırsan yeni doğrulanmış Firebase ID tokenı gönderilir;
+  kullanıcı kimliği sunucuda doğrulanır.
 </p>
 <p>
   Hava tahmini konuma bağlı olduğu için seçilen koordinatlar Open-Meteo'ya gider.
@@ -229,8 +285,17 @@
 
 <h2>Veri saklama ve silme</h2>
 <p>
-  Lucida kullanıcı hesabı ve sunucuya yüklenen gözlem günlüğü tutmaz. Cihazdaki
-  tercihlerini silmek için uygulamayı kaldırman yeterlidir. İzin verilmiş
+  Gözlem günlüğü, fotoğraf ve tercihler sunucuya yüklenmez. Cihazdaki tercihlerini
+  silmek için uygulamayı kaldırman yeterlidir. İsteğe bağlı hesabını
+  <strong>Hesabım → Hesabı sil</strong> bölümünden aynı hesabınla yeniden giriş
+  yaparak kalıcı olarak silebilirsin. Apple bağlıysa Apple yetkisi geri çekilir;
+  Firebase kimliği silinir ve RevenueCat müşteri verisinin silinmesi istenir.
+  RevenueCat silmesi asenkron işlenir. <strong>Mağaza aboneliğin kendiliğinden
+  iptal olmaz; mağazadan ayrıca iptal et.</strong> Cihazdaki günlük/favoriler
+  hesabı silmek veya çıkış yapmakla silinmez. Apple bağlı hesabın uygulama içi
+  silme akışı iOS'tadır. Uygulamayı yeniden yüklemeden de
+  <a href="./hesap-silme.html">web hesap silme talep yolunu</a> kullanabilirsin.
+  İzin verilmiş
   kullanım analitiği için yukarıdaki saklama ve kapatma açıklaması geçerlidir;
   uygulamayı kaldırmak daha önce gönderilmiş Google Analytics verilerini
   otomatik olarak sunucudan silmez.

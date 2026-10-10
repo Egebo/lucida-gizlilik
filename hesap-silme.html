@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucida — Hesap ve veri silme</title>
+<meta name="description" content="Lucida: Gökyüzü Rehberi hesabını ve ilişkili verilerini silme talebi. Uygulamayı yüklemeden destek üzerinden talep oluşturabilirsin.">
+<style>
+  :root { color-scheme: dark; --bg:#0B0D17; --panel:#12162A; --text:#E6E9F5; --muted:#9AA3C4; --line:#232941; --link:#7FA5FF; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width:720px; margin:auto; padding:48px 20px 80px; }
+  h1 { font-size:1.6rem; line-height:1.3; }
+  h2 { font-size:1.15rem; margin:36px 0 12px; border-top:1px solid var(--line); padding-top:20px; }
+  p,li { color:#D3D8EC; }
+  a { color:var(--link); overflow-wrap:anywhere; }
+  .request { padding:20px; border:1px solid var(--line); background:var(--panel); border-radius:12px; }
+  .request a { display:inline-block; padding:10px 0; font-weight:600; }
+  .muted,footer { color:var(--muted); font-size:.9rem; }
+  footer { border-top:1px solid var(--line); padding-top:20px; margin-top:40px; }
+</style>
+</head>
+<body>
+<main>
+<nav aria-label="Lucida sayfaları"><a href="./index.html">Gizlilik politikası</a> · <a href="./destek.html">Destek</a></nav>
+<h1>Lucida hesabını ve verilerini silme</h1>
+<p class="muted">Lucida: Gökyüzü Rehberi · Egemen Bozca · 11 Ekim 2026</p>
+<p>Google veya Apple ile oluşturduğun Lucida hesabının ve bu hesaba bağlı hizmet verilerinin silinmesini isteyebilirsin. Ücretsiz gökyüzü özellikleri için hesabın olması gerekmez.</p>
+
+<section class="request" aria-labelledby="request-title">
+<h2 id="request-title" style="border:0;margin:0;padding:0">Uygulamayı yüklemeden talep oluştur</h2>
+<p>Destek adresine <strong>“Lucida hesap silme talebi”</strong> konusuyla e-posta gönder. Google veya Apple ile giriş yaptığını ve hesabınla ilişkili e-posta adresini belirt. Apple'ın özel e-posta adresini kullanıyorsan bunu da belirtebilirsin.</p>
+<a href="mailto:bozcaegemen@gmail.com?subject=Lucida%20hesap%20silme%20talebi">Hesap silme talebini e-posta ile gönder</a>
+<p>E-posta bağlantısı açılmazsa doğrudan <a href="mailto:bozcaegemen@gmail.com">bozcaegemen@gmail.com</a> adresine yaz. Yeniden uygulama kurman gerekmez.</p>
+<p><strong>Parolanı, doğrulama kodunu, kimlik belgeni veya kart bilgilerini gönderme.</strong> Başkasının hesabının silinmesini önlemek için hesap sahipliği doğrulanır; gereken güvenli adımlar ve talebin sonucu destek yanıtında açıklanır. E-posta göndermek hesabını anında silmez.</p>
+</section>
+
+<h2>Uygulama içinden silme</h2>
+<ol>
+  <li>Ayarlar → Hesabım → Hesabı sil bölümünü aç.</li>
+  <li>Aynı Google/Apple hesabıyla yeniden giriş yaparak sahipliğini doğrula.</li>
+  <li>Kalıcı silme uyarısını onayla.</li>
+</ol>
+<p>Apple bağlı hesabın uygulama içi yetki iptali iOS'ta yapılır. iPhone'a erişimin yoksa yukarıdaki destek yolunu kullanabilirsin. Yeni hesap/satın alma akışı Lucida 1.5.2 native sürümü içindir; önceki sürümde hesap ekranı bulunmayabilir.</p>
+
+<h2>Hangi veriler silinir?</h2>
+<ul>
+  <li>Firebase Authentication'daki Lucida kullanıcı kaydı, ilişkili ad/e-posta ve bağlı Google/Apple sağlayıcı kimlikleri silinir. Google veya Apple hesabının kendisi silinmez.</li>
+  <li>RevenueCat'e Lucida müşteri kaydı ve ilişkili müşteri/satın alım verisinin silinmesi için istek gönderilir. Bu işlem kuyrukta asenkron işlenir; isteğin kabulü verinin hemen silindiği anlamına gelmez.</li>
+  <li>Apple giriş yetkisi bağlıysa ilgili yetkinin geri çekilmesi silme akışının bir parçasıdır.</li>
+</ul>
+
+<h2>Abonelik ve cihazındaki kayıtlar</h2>
+<p><strong>Hesabın silinmesi ücretli aboneliği otomatik iptal etmez.</strong> Yenilenmesini durdurmak için Google Play → Ödemeler ve abonelikler → Abonelikler veya iOS Ayarlar → Apple hesabın → Abonelikler bölümünden ayrıca iptal et. Hesap silme talebi abonelik iptal şartına bağlı değildir; destek yolunu her durumda kullanabilirsin.</p>
+<p>Gözlem günlüğü, fotoğraflar, favoriler ve tercihler yalnız cihazda tutulur; hesap silme bunları kaldırmaz. Bunları uygulamadan silebilir veya uygulamayı kaldırabilirsin. Hesap silme sonrasında Premium erişimini kaybedebilirsin.</p>
+
+<h2>Saklama ve diğer hizmetler</h2>
+<p>Mağazaların ödeme kayıtları ve sağlayıcıların yasal, faturalama veya güvenlik nedeniyle tutmak zorunda oldukları kayıtlar kendi saklama kurallarına tabidir; Lucida hesabını silmek App Store/Google Play hesabındaki işlem geçmişini silmez. Bu kayıtlara ilişkin ayrıntılar <a href="https://www.revenuecat.com/privacy">RevenueCat</a>, <a href="https://firebase.google.com/support/privacy">Firebase</a> ve kullandığın mağazanın politikalarında bulunur.</p>
+<p>Analytics Firebase hesap UID'siyle ilişkilendirilmez. İsteğe bağlı Analytics için <a href="./index.html">gizlilik politikasındaki</a> izin kapatma ve sunucu verisi talep açıklaması geçerlidir. Destek üzerinden Analytics/veri talebini de ayrıca belirtebilirsin.</p>
+<footer>Lucida · Egemen Bozca · <a href="./index.html">Gizlilik politikası</a></footer>
+</main>
+</body>
+</html>
