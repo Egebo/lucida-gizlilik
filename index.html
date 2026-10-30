@@ -74,7 +74,7 @@
   <h1>Lucida Gizlilik Politikası</h1>
 </header>
 
-<p class="updated"><strong>Son güncelleme:</strong> 11 Ekim 2026</p>
+<p class="updated"><strong>Son güncelleme:</strong> 30 Ekim 2026</p>
 
 <p>
   Bu belge Lucida uygulamasının hangi verileri işlediğini anlatır. Uygulamanın gerçek
@@ -83,11 +83,11 @@
 
 <h2>Özet</h2>
 <p>
-  Ücretsiz özellikler için hesap açman gerekmez ve reklam gösterilmez. İsteğe
+  Temel gökyüzü ve öğrenme özellikleri için hesap açman gerekmez ve reklam gösterilmez. Günlüğe yeni kayıt eklemek için ücretsiz hesap gerekir; ilk 10 kayıt ücretsizdir. İsteğe
   bağlı Google/Apple girişi ve Premium satın alımı seçersen aşağıdaki hesap ve
   mağaza verileri hizmet sağlayıcıları tarafından işlenir. Kişisel verilerin
   satılmaz veya pazarlama amacıyla paylaşılmaz. Günlüklerin, notların, fotoğrafların
-  ve seçtiğin konumlar cihazında kalır. İzin verirsen uygulamayı geliştirmek için
+  ve konum tercihlerin cihazında saklanır; hava tahmini ve yer adı için aşağıdaki sağlayıcılara ilgili konum bilgisi gönderilir. İzin verirsen uygulamayı geliştirmek için
   Google Firebase Analytics ile kullanım istatistikleri ölçülür. Analitik
   başlangıçta kapalıdır; izin vermeden uygulamayı kullanabilirsin.
 </p>
@@ -117,7 +117,7 @@
   cisimleri ve gözlem günlüğüne yazdığın kayıtlar (hedef, tarih, konum, ekipman,
   not, puan ve istersen eklediğin bir fotoğrafın kopyası) cihazının yerel
   depolamasında tutulur. Bu veriler cihazından
-  çıkmaz, uygulamayı silersen kaybolur.
+  Lucida sunucusuna yedeklenmez, uygulamayı silersen kaybolur. Konumun hava/yer adı isteğinde sağlayıcıya gönderilmesi aşağıda ayrıca açıklanır.
 </p>
 
 <h3>İsteğe bağlı kullanım analitiği</h3>
@@ -222,9 +222,14 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://open-meteo.com/">Open-Meteo</a></td>
-      <td>Seçilen konumun enlem ve boylamı (koordinatlar yuvarlanmadan)</td>
-      <td>Hava durumu ve bulutluluk tahmini</td>
+      <td><a href="https://api.met.no/doc/TermsOfService">MET Norway</a> (30 Ekim 2026 hava güncellemesi ve sonrası)</td>
+      <td>İki ondalığa yuvarlanmış enlem/boylam, bağlantı IP adresi ve uygulamayı tanıtan User-Agent</td>
+      <td>Hava durumu ve bulutluluk tahmini; cihazda HTTP önbelleği ile gereksiz tekrarlar azaltılır</td>
+    </tr>
+    <tr>
+      <td><a href="https://open-meteo.com/en/terms">Open-Meteo</a> (eski derlemeler)</td>
+      <td>Seçilen konumun enlem/boylamı ve bağlantı IP adresi</td>
+      <td>Eski sürümlerde hava durumu ve bulutluluk tahmini</td>
     </tr>
     <tr>
       <td>İşletim sisteminin konum/adres hizmetleri</td>
@@ -266,9 +271,7 @@
   kullanıcı kimliği sunucuda doğrulanır.
 </p>
 <p>
-  Hava tahmini konuma bağlı olduğu için seçilen koordinatlar Open-Meteo'ya gider.
-  Open-Meteo'nun ve işletim sisteminin konum/adres sağlayıcısının kendi gizlilik
-  politikaları da geçerlidir.
+  Yeni hava güncellemesinde tahmin için MET Norway'ye doğrudan HTTPS bağlantısı kurulur. Koordinatlar iki ondalığa yuvarlanır; Firebase UID, ad/e-posta veya günlük içeriği gönderilmez. MET Norway, bağlantı IP adresini ve istek koordinatlarını Oslo'daki kendi erişim günlüklerinde saklayabilir; kendi gizlilik kuralları geçerlidir. Lucida cihazda en fazla beş yaklaşık konumun tahmin yanıtını saklar ve sağlayıcının önbellek/geçerlilik talimatlarını uygular. Hava verisi yaklaşık dokuz günle sınırlıdır; daha ileri tarihler yalnız astronomik hesapları kullanır. Eski derlemelerde Open-Meteo bağlantısı devam eder; sağlayıcı bu istek günlüklerini kendi politikasına göre 90 gün tutabilir. İşletim sisteminin konum/adres sağlayıcısının politikası da geçerlidir.
 </p>
 
 <h2>Teleskop bağlantısı (Beta)</h2>
